@@ -602,6 +602,10 @@ BO_ 874 BLINDSPOTS_FRONT_CORNER_2: 16 XXX
  SG_ CHECKSUM : 0|16@1+ (1,0) [0|65535] "" XXX
  SG_ COUNTER : 16|8@1+ (1,0) [0|255] "" XXX
 
+BO_ 934 TAILGATE: 8 XXX
+ SG_ LIGHT_OR_BEEP : 17|2@0+ (1,0) [0|3] "" XXX
+ SG_ DOOR_POSITION : 38|4@0+ (1,0) [0|15] "" XXX
+
 BO_ 938 CHARGING_PORT: 8 XXX
  SG_ DOOR : 34|2@0+ (1,0) [0|3] "" XXX
 
@@ -649,7 +653,8 @@ BO_ 1041 DOORS_SEATBELTS: 8 XXX
  SG_ PASSENGER_REAR_DOOR : 56|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1042 TAIL1: 8 XXX
- SG_ TAILLIGHT : 50|1@0+ (1,0) [0|1] "" XXX
+ SG_ COUNTER : 15|4@0+ (1,0) [0|15] "" XXX
+ SG_ POSSIBLE_BRAKELIGHT : 50|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1043 LIGHTS: 8 XXX
  SG_ LEFT_TURN_SIGNAL : 20|1@0+ (1,0) [0|1] "" XXX
@@ -667,7 +672,9 @@ BO_ 1047 LIGHTS3: 8 XXX
  SG_ HEADLIGHTS : 40|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1048 TAIL3: 8 XXX
- SG_ TAILLIGHT : 46|1@0+ (1,0) [0|1] "" XXX
+ SG_ COUNTER : 12|4@1+ (1,0) [0|15] "" XXX
+ SG_ ON_WHEN_DOOR_OPEN : 34|2@0+ (1,0) [0|3] "" XXX
+ SG_ POSSIBLE_BRAKELIGHT : 46|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1050 LIGHTS2: 8 XXX
  SG_ COUNTER : 15|4@0+ (1,0) [0|15] "" XXX
@@ -676,7 +683,8 @@ BO_ 1050 LIGHTS2: 8 XXX
  SG_ HIGHBEAM : 42|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1077 TAIL2: 8 XXX
- SG_ TAILLIGHT : 28|1@0+ (1,0) [0|1] "" XXX
+ SG_ COUNTER : 15|4@0+ (1,0) [0|15] "" XXX
+ SG_ POSSIBLE_BRAKELIGHT : 28|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1144 DRIVE_MODE: 8 XXX
  SG_ DRIVE_MODE : 0|16@1+ (1,-61611) [0|61611] "" XXX
@@ -755,6 +763,8 @@ VAL_ 676 RIGHT_LANE_LINE 0 "Not Detected" 1 "Low Confidence" 2 "Medium Confidenc
 VAL_ 736 MSLA_STATUS 0 "disabled" 1 "active" 2 "paused";
 VAL_ 866 LEFT_LANE_LINE 0 "Not Detected" 1 "Low Confidence" 2 "Medium Confidence" 3 "High Confidence";
 VAL_ 866 RIGHT_LANE_LINE 0 "Not Detected" 1 "Low Confidence" 2 "Medium Confidence" 3 "High Confidence";
+VAL_ 934 LIGHT_OR_BEEP 1 "On" 2 "Off";
+VAL_ 934 DOOR_POSITION 6 "Open" 8 "Descending" 9 "Ascending" 1 "Closed";
 VAL_ 938 DOOR 1 "Open" 2 "Closed";
 VAL_ 1023 DRIVER_DOOR 0 "Closed" 1 "Open";
 VAL_ 1023 DRIVER_DOOR_LOCK 0 "Locked" 1 "Unlocked";
